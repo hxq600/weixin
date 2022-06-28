@@ -1,0 +1,94 @@
+/* pages/find/find.wxss */
+.main{
+  /* width: 100%; */
+  padding: 50rpx 50rpx;
+}
+.main .topbox{
+  background: #f1f1f1;
+  height: 100rpx;
+  border-radius: 50rpx;
+  overflow: hidden;
+}
+.topbox input{
+  width: 500rpx;
+  height: 100rpx;
+  /* background: orange; */
+  padding-left: 50rpx ;
+  float: left;
+  color: #6666;
+}
+.topbox .btn{
+  width: 100rpx;
+  height: 100rpx;
+  float: left;
+  position: relative;
+}
+.btn image{
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.titlebox{
+  height: 100rpx;
+  /* background: aqua; */
+}
+.titlebox .txt{
+  float: left;
+  font-size: 36rpx;
+  line-height: 100rpx;
+  padding-left: 20rpx;
+}
+.titlebox .txt_r{
+  float: right;
+  width: 140rpx;
+  height: 50rpx;
+  border: 1rpx solid #8888;
+  text-align: center;
+  color: #8888;
+  border-radius: 22rpx;
+  margin-top: 25rpx;
+  margin-right: 30rpx;
+  line-height: 50rpx;
+}
+
+/* 热门推荐 */
+/* .hotlist{ */
+/* height: 500rpx; 高度塌陷*/
+/* background: orange; */
+/* } */
+
+.hotlist .hotitem{
+  width: 180rpx;
+  height: 240rpx;
+  float: left;
+  margin: 19rpx;
+}
+.hotlist .hotitem text{
+  color: #8888;
+  font-size: 27rpx;
+  width: 180rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+}
+.hotlist .hotitem image{
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 20rpx;
+}
+/* 伪元素来清除浮动，解决高度塌陷问题：万能清除法 */
+.clearfix::after{
+content: "";
+height: 0;
+display: block;
+visibility: hidden;
+overflow: hidden;
+clear: both;
+}

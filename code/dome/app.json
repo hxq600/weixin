@@ -1,0 +1,39 @@
+{
+  "pages": [
+    
+    "pages/index/index",
+    "pages/denglu/denglu",
+    "pages/logs/logs",
+    "pages/play/play",
+    "pages/find/find"
+
+   
+  ],
+  "window": {
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#c20c0c",
+    "navigationBarTitleText": "飞鱼云音乐",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#ff0000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/touming/1T(1).png",
+        "selectedIconPath": "/images/touming/11T(1).png"
+      },
+      {
+        "pagePath": "pages/find/find",
+        "text": "发现",
+        "iconPath": "/images/touming/22T(1).png",
+        "selectedIconPath": "/images/touming/2T(1).png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,178 @@
+/**index.wxss 歌曲列表样式**/
+#banner{
+  height: 260rpx;
+}
+
+#banner image{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.list_wrap{
+  width: 100%;
+  height: 160rpx;
+  /* background: pink;  */
+  padding:10rpx 0px;
+  box-shadow: 0rpx 2rpx 1rpx #f1f1f1;
+  margin-bottom: 2rpx;
+}
+.list_wrap view{
+  float: left;
+}
+.list_wrap .list_l{
+  width: 160rpx;
+  height: 160rpx;
+   /* background: orange;   */
+  padding-top: 10rpx;
+  padding-left: 55rpx;
+}
+
+
+.list_wrap .list_c{
+  width: 360rpx;
+  height: 160rpx;
+  /* background: skyblue; */
+}
+.list_wrap .list_r{
+  width: 160rpx;
+  height: 145rpx;
+  /* background: khaki; */
+  padding-top: 23rpx;
+}
+
+.list_l image{
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 23rpx;
+}
+
+.list_c view{
+  width: 300rpx;
+  padding-left: 60rpx;
+  white-space: nowrap;/* 文本不换行*/
+  overflow: hidden;/*文本隐藏*/
+  text-overflow: ellipsis;/*文本溢出部分省略*/
+}
+.list_c .musicName{
+  font-size: 30rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.list_c .name{
+  font-size: 26rpx;
+  color: #555;
+}
+
+
+.list_r image{
+  width: 100rpx;
+  height: 100rpx;
+}
+/* 搜索框样式 */
+.searchBox{
+  width: 85%;
+  height: 100rpx;
+  background: #f6f6f6;
+  margin: 10rpx auto;
+  border-radius: 80rpx;
+  overflow: hidden;
+  /* color: #6666; */
+}
+.searchBox .txt{
+  width: 70%;
+  height: 100rpx;
+  /* background: skyblue; */
+  padding-left:10%;
+  float: left;
+}
+.searchBox .btn{
+  width: 20%;
+  height: 100rpx;
+  /* background: rgb(241, 241, 228); */
+  float: left;
+  position: relative;
+}
+.btn image{
+  width: 70%;
+  height: 80%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+
+/* 个人信息 */
+.userbox{
+  width: 90%;
+  height: 60rpx;
+  margin: 15rpx auto;
+  
+}
+.user_pic{
+  width: 60rpx;
+  height: 60rpx;
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.username{
+  font-size:  25rpx;
+  display: inline-block;
+  font-weight: bold;
+  position: relative;
+  margin: 0rpx 20rpx;
+  top: -22rpx;
+}
+.uservip{
+  width: 55rpx;
+  height: 35rpx;
+  position: relative;
+  top: -15rpx;
+  border-radius: 13rpx;
+}
+
+/* 歌单滚动滑块 */
+.main{
+  width: 95%;
+  height: 349rpx;
+  /* background-color: pink; */
+  position: relative;
+  left: 5%;
+}
+.title{
+  font-size: 30rpx;
+  font-weight: bold;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.main scroll-view{
+  width: 100%;
+  height: 258rpx;
+  /* background-color: orange; */
+  white-space: nowrap;
+}
+.main scroll-view .itembox{
+  width: 200rpx;
+  height: 250rpx;
+  /* background-color:skyblue ;  */
+  margin-right: 20rpx;
+  display: inline-block;
+  text-align: center;
+}
+.itembox image{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 20rpx;
+}
+.itembox .txt{
+  font-size: 25rpx;
+  color: rgb(110, 110, 110);
+  width: 200rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

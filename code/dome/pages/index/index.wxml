@@ -1,0 +1,101 @@
+<!--index.wxml-->
+
+<!-- <view  bindtap="denglu">
+  <button  type="default" >登录</button> 
+</view> -->
+
+
+<!-- 个人信息-->
+<view class="userbox">
+  <view class="user_pic">
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <view class="username">
+    <open-data type="userNickName"></open-data>
+    </view>
+    <image class="uservip" src="/images/vip.jpg"></image>
+</view> 
+
+
+
+<!--轮播图-->
+<swiper id="banner" indicator-dots="true" autoplay="true" interval="3000" circular="true" indicator-color="#fff" indicator-active-color="#c20c0c">
+<!--wx:for="{{background}}"微信前端页面通过循环遍历渲染后天数据-->
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+          <!-- <view class="swiper-item {{item}}">{{item}}</view>-->
+          <image  src="{{item}}"></image>
+          </swiper-item>
+        </block>
+</swiper>
+
+
+
+
+<!-- 搜索框 -->
+<view class="searchBox">
+<input placeholder="搜索你的歌曲" bindinput="keychange" class="txt" type="text"/>
+<view class="btn">
+<image bindtap="search" src="/images/touming/sousuoredT(1).png"></image>
+</view>
+
+</view>
+
+<!-- 歌单滚动滑块 --> 
+<view class="main">
+  <view class="title">热门博客</view>
+  <scroll-view scroll-x="false">
+      <block wx:for="{{musiclists}}" wx:key="id">
+      <view class="itembox" data-id="{{item.id}}" bindtap="play">
+        <image src="{{item.src}}"></image>
+        <view class="txt">{{item.musicName}}</view>
+      </view>
+    </block>
+  </scroll-view>
+</view>
+
+
+<!-- 歌单滚动滑块 --> 
+<view class="main">
+  <view class="title">音乐推荐 · 电台</view>
+  <scroll-view scroll-x="false">
+      <block wx:for="{{musiclists2}}" wx:key="id">
+      <view class="itembox" data-id="{{item.id}}" bindtap="play">
+        <image src="{{item.src}}"></image>
+        <view class="txt">{{item.musicName}}</view>
+      </view>
+    </block>
+  </scroll-view>
+</view>
+
+
+
+<!-- wx:for-index='i'i用了匹配当前下标 -->
+  <block wx:for="{{musiclist}}" wx:key="*this" wx:for-index='i'>
+<view class="list_wrap">
+
+<view class="list_l">
+<!-- ImgUrl_list[i]找到对应 下标的对应封面 -->
+<image src="{{ImgUrl_list[i]}}"></image>
+</view>
+
+<view class="list_c">
+<!-- {{item.musicName}}json数据的引用 -->
+<view class="musicName">{{item.name}}</view>
+<view class="name">{{item.artists[0].name}}</view>
+</view>
+
+
+<!-- 单击事件 -->
+<!--  data-id="{{item.id}}" 把每一个歌曲绑定对应的id-->
+<view data-id="{{item.id}}" bindtap="play" class="list_r">
+<image src="/images/bo2.jpg"></image>
+</view>
+
+</view>
+  </block>
+
+
+
+
+

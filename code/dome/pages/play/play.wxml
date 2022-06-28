@@ -1,0 +1,45 @@
+<!--播放页面 -->
+<view id="bg">
+<image class="bg" src="{{imgurl}}"></image>
+</view>
+
+<view class="name">{{name}}</view>
+
+<!-- 中间板块  -->
+<swiper class="main">
+<swiper-item class="item imgitem"> 
+<!-- 动画旋转 -->
+<image class="{{action.method=='play'?'':'clear'}}" src="{{imgurl}}"></image>
+</swiper-item>
+
+<swiper-item class="item txtbox">
+<!-- 文本域歌词  -->
+<!-- 竖向滚动组件 scroll-top='{{top}}'定位滚动条位置-->
+<scroll-view class="txt_wrap" scroll-y="false" scroll-top='{{top}}'>
+<!-- 歌词显示   wx:for-index='in'当前遍历时候的下标-->
+<view wx:for-index='in' wx:for="{{lrcList}}" class="{{in==index ?'color':'' }}">{{item[1]}}</view>
+</scroll-view>
+
+</swiper-item>
+</swiper>
+
+<!-- 进度条 -->
+<view class="timebox">
+<view class="play_time">{{playtime}}</view>
+<!-- 进度条最大值max ,value代表当前位置-->
+<slider bindchange="sliderchange" activeColor="#c20c0c" block-size="14" max="{{max}}" value="{{move}}"></slider>
+<view class="end_time" >{{timelength}}</view>
+
+</view>
+
+<!-- 底部暂停板块 -->
+<view class="btnBox">
+<image class="huan" bindtap="changemode" src="/images/playb/{{mode=='loop'?'huan':'danb'}}.png"></image>
+<image class="shang" bindtap="prevSong" src="/images/playb/shangb.png"></image>
+<image bindtap="playdate" src="/images/playb/{{action.method=='play'?'tingb':'bo'}}.png"></image>
+<image class="xia" bindtap="nextSong" src="/images/playb/xiab.png"></image>
+</view>
+
+
+<!--bindtimeupdate播放时间更改是触发  -->
+<audio bindended="changeMusic" bindtimeupdate="timechange" action="{{action}}" src="http://music.163.com/song/media/outer/url?id={{musicId}}.mp3"></audio>
